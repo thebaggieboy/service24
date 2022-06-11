@@ -1,0 +1,139 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block head %}
+  <title>Apartment detail</title>
+{% endblock head %}
+
+
+{% block content %}
+<div  class="container-fluid p-3" style="height: 100vh; padding: 40px;">
+  <div class="container"> <br>
+    
+    <div class="row">
+        <div class="col-lg-6">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./dist/images/60f04147-0435-4877-8827-860f4cfd0079.webp" class="d-block w-100" alt="...">
+                 
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./dist/images/e1574953-4d16-4dad-9326-9e2c0f703b26.webp" class="d-block w-100" alt="...">
+                 
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./dist/images/e28beaa1-8d02-4e4a-86ee-b556fd15424f.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+]
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>     <br>
+              <div class="row">
+              
+                <div class="col-6">
+                  <img src="./dist/images/4107a2ba-2f43-469a-b57d-758256d67d0f.webp" width="400px;" class="img-fluid" alt="">
+                </div>
+                <div class="col-6">
+                  <img src="./dist/images/9288f6be-56b3-4dab-9f1e-89baa52cbbd3.webp" width="400px;" class="img-fluid" alt="">
+                </div>
+            </div> <br>
+            <div class="row">
+              <div class="col-6">
+                <img src="./dist/images/faafaf11-a034-4874-abfa-b0816cd6d125.webp" width="400px;" class="img-fluid" alt="">
+              </div>
+              <div class="col-6">
+                <img src="./dist/images/4107a2ba-2f43-469a-b57d-758256d67d0f.webp" width="400px;" class="img-fluid" alt="">
+              </div>
+            
+          </div>
+        </div>
+        <div class="col-lg-6"> <br>
+            <ul class="list-group list-group-flush">
+                <h5 class="text-center">Apartment title</h5>
+                <p style="font-size: 14px;" class="lead text-center">guest ~ <span>bedroom</span> ~ <span>bathroom</span> ~ <span>location</span> </p>
+             
+                <li class="list-group-item text-center"><span style="font-size: 14px; ">Ratings</span>   
+                 
+                  <span style="margin-left: 15px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                    </svg><span style="font-size:14px;"> 5.0 stars</span></span> </li>
+       
+                <li class="list-group-item">
+                  <p class="lead"> <div style="padding: 5px; font-size: 14px;" class="container">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ab vel quos quae incidunt. Modi quis minima dolores accusantium? Nesciunt, qui ut nemo vero ea quasi sapiente rem nostrum quia
+                  </div>.</p>
+                </li>
+              
+        
+              </ul> <hr>
+              <p class="text-center">Book apartment</p>
+              <div  class="card  text-center">
+               
+                <div class="card-body">
+                  <div class="row">
+                    <div style="font-size: 14px;" class="col-sm-6">
+                      Check in date
+                      <div class="card">
+                        <div class="card-body  d-flex justify-content-center">
+                         
+                         <input type="date" class="form-control text-center" name="" id="">
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="font-size: 14px;" class="col-sm-6">
+                      Check out date
+                      <div class="card ">
+                        <div class="  card-body">
+                        
+                          <input type="date" class="form-control text-center" name="" id="">
+                        </div>
+                      </div>
+                    </div> <br>
+                    <div class="container text-center form-group p-3">
+                      <div class="input-group mb-3">
+                        <select class="form-select" id="inputGroupSelect02">
+                          <option selected>Choose no of guests</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                          <option value="4">Four</option>
+                          <option value="5">Five</option>
+                        </select>
+
+                      </div>
+                      
+                      <br>
+                      <button style="" class="btn btn-outline-dark btn-lg">Make a reservation</button> <br>
+                      <small style="font-size: 12px;" class="text-center">You wont be charged yet</small> <br>  
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+{% endblock content %}
+   

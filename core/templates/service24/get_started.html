@@ -1,0 +1,26 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block head %}
+  <title>Get started</title>
+{% endblock head %}
+
+{% block content %}
+  
+<main class="container" style="padding: 5px;">
+  <div class="px-4 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Get started renting properties</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<a class="btn btn-dark btn-lg px-4 gap-3" href="{% url 'core:host' %}">Become an host</a>          <a href="./forms.html" type="button" class="btn btn-outline-secondary btn-lg px-4">Signup</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+  
+{% endblock content %}
+  
+ 
