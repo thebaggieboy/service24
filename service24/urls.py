@@ -7,9 +7,13 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+    #path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('accounts/', include('allauth.urls')),
     path('', views.IndexView.as_view(), name='home'),
     path('explore/', include('core.urls')),
-
+    path('host/', include('hosts.urls')),
+   
 ]
 
 

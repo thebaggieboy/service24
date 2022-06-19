@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'core',
+    'accounts.apps.AccountsConfig',
+    'hosts.apps.HostsConfig',
+    'crispy_forms',
+    'api'
 
   
 ]
@@ -133,6 +137,10 @@ USE_TZ = True
 
 
 REST_FRAMEWORK = {
+     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
@@ -147,28 +155,21 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, os.path.join('static'))
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, os.path.join('media'))
 SITE_ID = 1
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
+AUTH_USER_MODEL = 'accounts.CustomUser'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 
-
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:3000",
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-]
-
-
-CORS_ALLOW_METHODS = [
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-]
-
+REST_FRAMEWORK = {
+   
+}
